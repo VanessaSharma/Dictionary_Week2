@@ -1,6 +1,7 @@
 import java.util.List;
 import java.util.ArrayList;
 
+
 public class Definition {
   private String mUserDefinition;
   private static ArrayList<Definition> definitions = new ArrayList<Definition>();
