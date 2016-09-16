@@ -14,7 +14,7 @@ public class DefinitionTest {
     assertEquals("a fruit", myDefinition.getUserDefinition());
   }
   @Test
-  public void all_returnsAllInstancesOfDefinition_true() {
+  public void all_returnsDefinitionsOfDefinition_true() {
     Definition firstDefinition = new Definition("a fruit");
     Definition secondDefinition = new Definition("a delicious fruit");
     assertEquals(true, Definition.all().contains(firstDefinition));
@@ -33,12 +33,6 @@ public class DefinitionTest {
   }
   @Test
   public static Definition find(int id) {
-    return instances.get(id - 1);
-  }
-  @Test
-  public void addDefinition_addsWordToWordList_true() {
-    Definition myDefinition = new Definition("a fruit");
-    Word addWord = new Word("banana");
-    assertTrue(myDefinition.getDefinition().contains(wordWord));
+    return definitions.get(id - 1);
   }
 }

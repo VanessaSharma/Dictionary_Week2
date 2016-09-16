@@ -3,24 +3,27 @@ import java.util.ArrayList;
 
 public class Definition {
   private String mUserDefinition;
-  private static ArrayList<Definition> instances = new ArrayList<Definition>();
+  private static ArrayList<Definition> definitions = new ArrayList<Definition>();
   private int mId;
 
 public Definition(String userDefinition) {
   mUserDefinition = userDefinition;
-  instances.add(this);
-  mId = instances.size();
+  definitions.add(this);
+  mId = definitions.size();
 }
 public String getUserDefinition() {
   return mUserDefinition;
 }
 public static List<Definition> all() {
-  return instances;
+  return definitions;
 }
 public static void clear() {
-  instances.clear();
+  definitions.clear();
 }
 public int getId() {
   return mId;
+}
+public static  Definition find(int id) {
+  return definitions.get(id -1);
 }
 }

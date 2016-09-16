@@ -21,7 +21,7 @@ public class TaskTest {
     assertEquals(True, myWord.getUserWord());
 }
   @Test
-  public void all_returnsAllInstancesOfWord_true() {
+  public void all_returnsAllWordsOfWord_true() {
     Word firstWord = new Word("apple");
     Word secondWord = new Word("banana");
     assertEquals(true, Word.all().contains(firstTask));

@@ -3,28 +3,30 @@ import java.util.ArrayList;
 
 public class Word {
   private String mUserWord;
-  private static List<Word> instances = new ArrayList<Word>();
+  private static List<Word> words = new ArrayList<Word>();
   private int mId;
+  private List<Definition> mUserDefinition2;
 
 public Word(String userWord) {
   mUserWord = userWord;
-  instances.add(this);
-  mId = instances.size();
+  words.add(this);
+  mId = words.size();
+  mUserDefinition2 = new ArrayList<Definition>();
 }
 public String getUserWord() {
   return mUserWord;
  }
 public static List<Word> all() {
-  return instances;
+  return words;
 }
 public static void clear() {
-  instances.clear();
+  words.clear();
 }
 public int getId() {
   return mId;
 }
 public static Word find(int id) {
-  return instances.get(id - 1);
+  return words.get(id - 1);
 }
 
 }
