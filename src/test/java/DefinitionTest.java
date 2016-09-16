@@ -3,10 +3,14 @@ import static org.junit.Assert.*;
 
 public class DefinitionTest {
 
+  @After
+  public void tearDown() {
+    Definition.clear();
+}
   @Test
   public void definition_instantiatesCorrectly_true() {
-    Definition myDefinition = new myDefinition("a fruit");
-    assertEquals(True, myDefinition instanceof Definition);
+    Definition myDefinition = new Definition("a fruit");
+    assertEquals(true, myDefinition instanceof Definition);
   }
   @Test
   public void getUserDefinition_definitionInstantiatesWithUserDefinition_apple() {
@@ -30,9 +34,5 @@ public class DefinitionTest {
   public void getId_definitionsInstantiatesWithId_1() {
     Definition myDefinition = new Definition("a fruit");
     assertEquals(1, myDefinition.getId());
-  }
-  @Test
-  public static Definition find(int id) {
-    return definitions.get(id - 1);
   }
 }

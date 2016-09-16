@@ -2,7 +2,7 @@ import org.junit.*;
 import static org.junit.Assert.*;
 import java.time.LocalDateTime;
 
-public class TaskTest {
+public class WordTest {
 
   @Test
    public void Word_instantiatesCorrectly_true() {
@@ -18,14 +18,14 @@ public class TaskTest {
   @Test
     public void getUserWord_wordInstantiatesWithUserWord_apple() {
     Word myWord = new Word("apple");
-    assertEquals(True, myWord.getUserWord());
+    assertEquals("apple", myWord.getUserWord());
 }
   @Test
   public void all_returnsAllWordsOfWord_true() {
     Word firstWord = new Word("apple");
     Word secondWord = new Word("banana");
-    assertEquals(true, Word.all().contains(firstTask));
-    assertEquals(true, Word.all().contains(secondTask));
+    assertEquals(true, Word.all().contains(firstWord));
+    assertEquals(true, Word.all().contains(secondWord));
   }
 
   @Test
@@ -45,17 +45,18 @@ public class TaskTest {
   public void find_returnsWordWithSameId_secondWord() {
     Word firstWord = new Word("apple");
     Word secondWord = new Word("banana");
-    assertEquals(Word.find(secondWord.getId)), secondWord);
+    assertEquals(Word.find(secondWord.getId()), secondWord);
   }
   @Test
   public void getDefinition_initiallyReturnsEmptyList_ArrayList() {
     Word myWord = new Word("apple");
-    assertEquals(0, myDefinition.getDefinition().size());
+    assertEquals(0, myWord.getDefinition().size());
   }
   @Test
   public void addDefinition_addDefinitionsToWord_true() {
     Word myWord = new Word("apple");
     Definition myDefinition = new Definition("a delicious fruit");
     myWord.addDefinition(myDefinition);
-    assertTrue(myWord.getDefinition().contain(myDefinition));
+    assertTrue(myWord.getDefinition().contains(myDefinition));
   }
+}
