@@ -15,7 +15,11 @@ public class TaskTest {
       Word myWord = new Word("apple");
       assertEquals("apple", myWord.getUserWord());
   }
-
+  @Test
+    public void getUserWord_wordInstantiatesWithUserWord_apple() {
+    Word myWord = new Word("apple");
+    assertEquals(True, myWord.getUserWord());
+}
   @Test
   public void all_returnsAllInstancesOfWord_true() {
     Word firstWord = new Word("apple");
