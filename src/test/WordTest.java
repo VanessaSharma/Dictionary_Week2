@@ -47,5 +47,15 @@ public class TaskTest {
     Word secondWord = new Word("banana");
     assertEquals(Word.find(secondWord.getId)), secondWord);
   }
-
-}
+  @Test
+  public void getDefinition_initiallyReturnsEmptyList_ArrayList() {
+    Word myWord = new Word("apple");
+    assertEquals(0, myDefinition.getDefinition().size());
+  }
+  @Test
+  public void addDefinition_addDefinitionsToWord_true() {
+    Word myWord = new Word("apple");
+    Definition myDefinition = new Definition("a delicious fruit");
+    myWord.addDefinition(myDefinition);
+    assertTrue(myWord.getDefinition().contain(myDefinition));
+  }

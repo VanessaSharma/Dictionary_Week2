@@ -8,13 +8,11 @@ public class DefinitionTest {
     Definition myDefinition = new myDefinition("a fruit");
     assertEquals(True, myDefinition instanceof Definition);
   }
-
   @Test
-  public void definition_getsDefinition_apple() {
-    Definition myDefinition = new myDefinition("a fruit");
+  public void getUserDefinition_definitionInstantiatesWithUserDefinition_apple() {
+    Definition myDefinition = new Definition("a fruit");
     assertEquals("a fruit", myDefinition.getUserDefinition());
   }
-
   @Test
   public void all_returnsAllInstancesOfDefinition_true() {
     Definition firstDefinition = new Definition("a fruit");
@@ -36,12 +34,6 @@ public class DefinitionTest {
   @Test
   public static Definition find(int id) {
     return instances.get(id - 1);
-  }
-  @Test
-  public void getDefinition_initiallyReturnsEmptyList_ArrayList() {
-    Definition.clear();
-    Definition myDefinition = new Definition("a fruit");
-    assertEquals(0, myDefinition.getDefinition().size());
   }
   @Test
   public void addDefinition_addsWordToWordList_true() {
