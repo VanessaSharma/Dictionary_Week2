@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Definition {
   private String mUserDefinition;
-  private static ArrayList<Definition> definitions = new ArrayList<Definition>();
+  private static List<Definition> definitions = new ArrayList<Definition>();
   private int mId;
 
 public Definition(String userDefinition) {
@@ -24,7 +24,7 @@ public static void clear() {
 public int getId() {
   return mId;
 }
-public static  Definition find(int id) {
+public static Definition find(int id) {
   return definitions.get(id -1);
 }
 }
