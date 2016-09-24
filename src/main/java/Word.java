@@ -1,7 +1,6 @@
 import java.util.List;
 import java.util.ArrayList;
 
-
 public class Word {
   private String mUserWord;
   private static List<Word> words = new ArrayList<Word>();
@@ -29,7 +28,7 @@ public int getId() {
 public static Word find(int id) {
   return words.get(id - 1);
 }
-public List<Definition> getDefinition() {
+public List<Definition> getDefinitions() {
   return mDefinitions;
 }
 
